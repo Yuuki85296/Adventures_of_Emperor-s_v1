@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits - Adventure of Emperor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face { font-family: 'TA8Bit'; src: url('../fonts/TA 8 Bit.ttf') format('truetype'); }
+        body { background-color: #1a1a2e; color: #fff; font-family: 'Press Start 2P', cursive; min-height: 100vh; }
+        .pixel-border { border: 4px solid #fff; box-shadow: -4px 0 0 0 #000, 4px 0 0 0 #000, 0 -4px 0 0 #000, 0 4px 0 0 #000; }
+        .member-card { background-color: #0f3460; transition: transform 0.2s; }
+        .member-card:hover { transform: scale(1.02); }
+        
+        /* ฟอนต์ไทย */
+        h1, h3, p, span.thai { font-family: 'TA8Bit', sans-serif !important; }
+        
+        /* กรอบรูป 1 นิ้ว */
+        .photo-frame { 
+            width: 120px; 
+            height: 160px; 
+            background-color: #16213e; 
+            overflow: hidden; 
+            border: 4px solid #fff; 
+            image-rendering: pixelated;
+            cursor: zoom-in;
+        }
+        .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+        .btn-green { background-color: #4e9f3d; transition: all 0.2s; }
+        .btn-green:hover { background-color: #1e5128; transform: translateY(-2px); }
+
+        /* Modal / Pop-up CSS */
+        .modal {
+            display: none; position: fixed; z-index: 1000; left: 0; top: 0;
+            width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);
+            justify-content: center; align-items: center; cursor: zoom-out;
+        }
+        .modal-content {
+            max-width: 400px; width: 80%; border: 4px solid #fff;
+            image-rendering: pixelated; animation: zoom 0.3s;
+        }
+        @keyframes zoom { from {transform:scale(0)} to {transform:scale(1)} }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+    <div class="max-w-6xl mx-auto">
+        <a href="../index.html" class="inline-block mb-12 p-3 pixel-border btn-green text-[10px]"> [ < ] BACK TO MENU </a>
+        
+        <h1 class="text-5xl text-center text-yellow-400 mb-16 uppercase">รายชื่อผู้จัดทำ</h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <div class="pixel-border p-6 flex flex-col sm:flex-row items-center member-card shadow-[8px_8px_0_0_rgba(0,0,0,0.5)]">
+                <div class="photo-frame mb-4 sm:mb-0 flex-shrink-0">
+                    <img src="/Photo/Profile4.png" alt="นายพิชิตชัย รุ่งฤกษ์วิวัฒน์" class="zoomable">
+                </div>
+                <div class="sm:ml-8 member-info text-center sm:text-left">
+                    <p class="text-[#e94560] text-[20px] mb-2 font-mono">RANK: LEADER</p>
+                    <h3 class="text-2xl text-white mb-2">นายพิชิตชัย รุ่งฤกษ์วิวัฒน์</h3>
+                    <p class="text-blue-300 text-lg">รหัสนักศึกษา: 67319010019</p>
+                    <p class="text-slate-400 text-sm mt-2">หน้าที่: รวบรวมข้อมูล / ทดสอบระบบ / จัดทำเอกสาร</p>
+                </div>
+            </div>
+
+            <div class="pixel-border p-6 flex flex-col sm:flex-row items-center member-card shadow-[8px_8px_0_0_rgba(0,0,0,0.5)]">
+                <div class="photo-frame mb-4 sm:mb-0 flex-shrink-0">
+                    <img src="/Photo/Profile3.png" alt="นายพลพล ศิริมา" class="zoomable">
+                </div>
+                <div class="sm:ml-8 member-info text-center sm:text-left">
+                    <p class="text-[#e94560] text-[20px] mb-2 font-mono">RANK: DEVELOPER</p>
+                    <h3 class="text-2xl text-white mb-2">นายพลพล ศิริมา</h3>
+                    <p class="text-blue-300 text-lg">รหัสนักศึกษา: 67319010012</p>
+                    <p class="text-slate-400 text-sm mt-2">หน้าที่: เขียนโค้ด / ออกแบบ UI / วางระบบ </p>
+                </div>
+            </div>
+
+            <div class="pixel-border p-6 flex flex-col sm:flex-row items-center member-card shadow-[8px_8px_0_0_rgba(0,0,0,0.5)]">
+                <div class="photo-frame mb-4 sm:mb-0 flex-shrink-0">
+                    <img src="/Photo/Profile2.png" alt="นายภัทรพันธุ์ ลุนทะลา" class="zoomable">
+                </div>
+                <div class="sm:ml-8 member-info text-center sm:text-left">
+                    <p class="text-[#e94560] text-[20px] mb-2 font-mono">RANK: ARTIST</p>
+                    <h3 class="text-2xl text-white mb-2">นายภัทรพันธุ์ ลุนทะลา</h3>
+                    <p class="text-blue-300 text-lg">รหัสนักศึกษา: 67319010013</p>
+                    <p class="text-slate-400 text-sm mt-2">หน้าที่: ออกแบบตัวละคร / วาดฉากแผนที่ / ทดสอบระบบ</p>
+                </div>
+            </div>
+
+            <div class="pixel-border p-6 flex flex-col sm:flex-row items-center member-card shadow-[8px_8px_0_0_rgba(0,0,0,0.5)]">
+                <div class="photo-frame mb-4 sm:mb-0 flex-shrink-0">
+                    <img src="/Photo/Profile1.png" alt="นายจิรภัทร สุวรรณศรี" class="zoomable">
+                </div>
+                <div class="sm:ml-8 member-info text-center sm:text-left">
+                    <p class="text-[#e94560] text-[20px] mb-2 font-mono">RANK: WRITER</p>
+                    <h3 class="text-2xl text-white mb-2">นายจิรภัทร สุวรรณศรี</h3>
+                    <p class="text-blue-300 text-lg">รหัสนักศึกษา: 67319010006</p>
+                    <p class="text-slate-400 text-sm mt-2">หน้าที่: เขียนเนื้อเรื่อง / จัดทำคู่มือการเล่น / ทดสอบระบบ</p>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="mt-20 mb-10 text-center">
+            <p class="thai text-slate-500 text-sm italic">PROJECT: ADVENTURE OF EMPEROR - 2026</p>
+        </footer>
+    </div>
+
+    <div id="imageModal" class="modal" onclick="this.style.display='none'">
+        <img class="modal-content" id="imgFull">
+        <div id="caption" class="thai text-center mt-4 text-xl text-yellow-400"></div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("imgFull");
+        const captionText = document.getElementById("caption");
+        const zoomableImages = document.querySelectorAll('.zoomable');
+
+        zoomableImages.forEach(img => {
+            img.onclick = (e) => {
+                e.stopPropagation();
+                modal.style.display = "flex";
+                modalImg.src = img.src;
+                captionText.innerHTML = img.alt;
+            };
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Maker XP Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @font-face {
+            font-family: 'TA8Bit';
+            src: url('/fonts/TA 8 Bit.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body { 
+            background-color: #1a1a2e; 
+            color: #fff; 
+            font-family: 'Press Start 2P', cursive;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .thai-pixel {
+            font-family: 'TA8Bit', sans-serif !important;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+        }
+
+        .pixel-border {
+            border: 4px solid #fff;
+            box-shadow: -4px 0 0 0 #000, 4px 0 0 0 #000, 0 -4px 0 0 #000, 0 4px 0 0 #000;
+        }
+
+        .card-rpg {
+            background-color: #16213e;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .card-rpg:hover {
+            background-color: #0f3460;
+            transform: scale(0.98);
+            border-color: #e94560;
+        }
+
+        main { flex: 1 0 auto; }
+        footer { flex-shrink: 0; }
+    </style>
+</head>
+<body>
+
+    <nav class="p-4 bg-[#0f3460] border-b-4 border-black sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-lg md:text-xl text-yellow-400">Adventures of Emperor's v1.0</div>
+            <div class="hidden md:block text-[10px] text-blue-300">Project-System v1.1</div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 text-[#e94560]">
+                SELECT START <br>
+                <span class="text-yellow-400 thai-pixel">ยินดีต้อนรับสู่โครงงาน</span>
+            </h1>
+            <div class="h-2 w-48 bg-[#e94560] mx-auto mb-4 shadow-[0_4px_0_0_#000]"></div>
+        </header>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+            <a href="/Link/Guidebook.html">
+                <div class="card-rpg pixel-border p-2 flex flex-col items-center justify-between">
+                    <div class="h-24 md:h-32 flex items-center justify-center text-5xl mb-2">📗</div>
+                    <div class="p-2 text-center border-t-4 border-black w-full bg-[#1a1a2e]">
+                        <h3 class="text-[16px] md:text-[20px] text-white font-normal thai-pixel">คู่มือ</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Download/68ทส2_03_1-5บท.docx" download="68ทส2_03_1-5บท">
+                <div class="card-rpg pixel-border p-2 flex flex-col items-center justify-between">
+                    <div class="h-24 md:h-32 flex items-center justify-center text-5xl mb-2">📜</div>
+                    <div class="p-2 text-center border-t-4 border-black w-full bg-[#1a1a2e]">
+                        <h3 class="text-[16px] md:text-[20px] text-white font-normal thai-pixel">บทที่ 1-5</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Link/credit.html">
+                <div class="card-rpg pixel-border p-2 flex flex-col items-center justify-between">
+                    <div class="h-24 md:h-32 flex items-center justify-center text-5xl mb-2">👥</div>
+                    <div class="p-2 text-center border-t-4 border-black w-full bg-[#1a1a2e]">
+                        <h3 class="text-[16px] md:text-[20px] text-white font-normal thai-pixel">ผู้จัดทำ</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Download/Adventures of Emperor's 1.0.zip" download="Adventures of Emperor's 1.0.zip">
+                <div class="card-rpg pixel-border p-2 flex flex-col items-center justify-between">
+                    <div class="h-24 md:h-32 flex items-center justify-center text-5xl mb-2">🎮</div>
+                    <div class="p-2 text-center border-t-4 border-black w-full bg-[#1a1a2e]">
+                        <h3 class="text-[16px] md:text-[20px] text-white font-normal thai-pixel">โหลดไฟล์</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-black p-8 text-center border-t-4 border-[#e94560]">
+        <p class="text-[10px] text-gray-500 uppercase tracking-widest">
+            Game Over? No, Continue to 2026. <br>
+            <span class="text-blue-400 mt-2 block">Testing Platform Project</span>
+        </p>
+    </footer>
+
+</body>
+</html>
